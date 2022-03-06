@@ -1,4 +1,5 @@
 function getEven(arr) {
+    /* function getEven(arr) {
     /* 
         Return an array containing only even numbers as a result
         Example
@@ -7,6 +8,14 @@ function getEven(arr) {
 
         Write you code below
     */
+   res = []
+   for(x=0 ;x<arr.length ;x++){
+       if (arr[x]%2 === 0){
+           res.push(arr[x])
+       }
+   }
+   return res
+
 
 }
 
@@ -18,6 +27,10 @@ function multiplyByN(arr, n) {
             Output: [3,9,13,165]
         Write you code below
     */
+   for(x=0 ; x<arr.length ;x++){
+       arr[x] = arr[x]*n
+   }
+   return arr
 }
 
 function removeNthElement(arr, n) {
@@ -28,6 +41,13 @@ function removeNthElement(arr, n) {
             Output: [1,3,4,7]
         Write you code below
     */
+   res = []
+   for (x=0 ; x<arr.length ; x++){
+       if (x!=n){
+           res.push(arr[x])
+       }
+   } 
+   return res
 }
 
 module.exports = {
@@ -35,3 +55,4 @@ module.exports = {
     multiplyByN,
     removeNthElement
 }
+      
